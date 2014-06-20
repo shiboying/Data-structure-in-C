@@ -1,0 +1,7 @@
+Sorting                 average      worst       best
+----------------------------------------------------------
+(Simple)Insert Sort     O(n2)        O(n2)       O(1)
+Quick Sort              O(nlogn)     O(n2)       O(logn)
+Heap Sort               O(nlogn)     O(nlogn)    O(1)
+Merge Sort              O(nlogn)     O(nlogn)    O(n)
+Radix Sort              O(d(n+rd))   O(d(n+rd))  O(rd)
