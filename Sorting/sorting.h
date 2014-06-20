@@ -34,13 +34,32 @@ typedef struct{
 }SqList;
 
 void print(SqList list);
+
 void Straight_Insert_Sort(SqList* list);//O(n2),spend time on searching position
+
 void Binary_Insert_Sort(SqList* list);//O(n2), only reduce value compare times
+
 void Shell_Insert(SqList*list, int increment);
 void Shell_Sort(SqList* list, int dlta[], int t);//Also named Diminishing Increment Sort, Best O(n)
+
 void Bubble_Sort(SqList* list);//O(n2) two for loops
+
 int Partition(SqList* list, int low, int high);
 void QSort(SqList *list, int low, int high);
 void Quick_Sort(SqList *list);//best
+
+int better_Partition(SqList* list, int low, int high);
+void better_QSort(SqList *list, int low, int high);
+void better_Quick_Sort(SqList *list);//best
+
+int minValue(SqList list, int i);
+void Simple_Select_Sort(SqList *list);
+
+void Heap_Adjust(SqList *list, int s, int m);
+void Heap_Sort(SqList *list);//O(nlogn)
+
+void Merge(recordType s[], recordType t[], int start, int middle, int end);
+void MSort(recordType s[], recordType t[], int start, int end);
+void Merge_Sort(SqList *list);
 #endif
 
