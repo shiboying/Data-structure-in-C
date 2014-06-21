@@ -6,5 +6,8 @@ searching.o: StaticSearching.c searching.h
 bst.o: BinarySearchTree.c searching.h
 	gcc -Wall -pedantic -std=gnu99 -g -c BinarySearchTree.c -o bst.o
 
-searching:searching.o bst.o searching_test.c
-	gcc -Wall -pedantic -std=gnu99 -g -pthread searching_test.c searching.o bst.o -o searching
+avl.o: AVLTree.c searching.h
+	gcc -Wall -pedantic -std=gnu99 -g -c AVLTree.c -o avl.o
+
+searching:searching.o bst.o avl.o searching_test.c
+	gcc -Wall -pedantic -std=gnu99 -g -pthread searching_test.c searching.o bst.o avl.o -o searching

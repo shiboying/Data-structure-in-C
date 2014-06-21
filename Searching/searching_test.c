@@ -29,4 +29,13 @@ int main(int argc, const char * argv[]){
     BinarySearchTree_Destroy(&dt);
     BinarySearchTree_traverse(dt);
     printf("\n");
+    
+    BSTree bsdt;
+    bsdt = NULL;
+    Status flag;
+    ElemType r2[5]={{13,1},{24,2},{37,3},{90,4},{53,5}};
+    for(i=0;i<5;i++)
+        AVLTree_Insert(&bsdt,r2[i],&flag);
+    AVLTree_traverse(bsdt);
+    printf("\n");
 }

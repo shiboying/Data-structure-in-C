@@ -27,27 +27,32 @@ typedef struct{
     int length;
 }SqList;
 
+//Element structure
 typedef struct{
     int value;
     int order;
 }ElemType;
 
+//Binary Search Tree structure
 typedef struct BiTNode{
     ElemType data;
     struct BiTNode *lchild,*rchild;
 }BiTNode,*BiTree;
 
+//AVL tree(Balance tree) structure
 typedef struct BSTNode{
     ElemType data;
-    int bf;
+    int bf;//balance factor(depth(lchild)-depth(rchild)) only can be -1 0 1
     struct BSTNode *lchild,*rchild;
 }BSTNode,*BSTree;
+
 
 Status initial_list(SqList* list);
 Status print_list(SqList* list);
 //*************** Static searching *****************
 int Sequence_Searching(SqList list, int value);
 int Binary_Searching(SqList list, int value);
+
 
 //*************** Dynamic searching *****************
 void BinarySearchTree_traverse(BiTree t);
@@ -57,5 +62,12 @@ Status BinarySearchTree_Insert(BiTree *t, ElemType elem);
 void Delete_Treenode(BiTree *node);
 Status BinarySearchTree_Delete(BiTree *t, ElemType elem);
 void BinarySearchTree_Destroy(BiTree *t);
+
+void AVLTree_traverse(BSTree t);
+void Right_Rotate(BSTree *t);
+void Left_Rotate(BSTree *t);
+void Left_Balance(BSTree *t);
+void Right_Balance(BSTree *t);
+Status AVLTree_Insert(BSTree *t,ElemType element,Status *taller);
 #endif
 
