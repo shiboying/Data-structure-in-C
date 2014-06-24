@@ -35,8 +35,8 @@ typedef struct{
 
 void print(SqList list);
 
+void Insert_Sort_Better(int a[], int n);
 void Straight_Insert_Sort(SqList* list);//O(n2),spend time on searching position
-
 void Binary_Insert_Sort(SqList* list);//O(n2), only reduce value compare times
 
 void Shell_Insert(SqList*list, int increment);
