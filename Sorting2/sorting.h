@@ -16,6 +16,16 @@ void Swap_Without_Temp2(int *a, int *b);
 void Insert_Sort_Better(int a[], int n);
 void Insert_Shell_Sort(int a[], int n);
 
+void Select_Sort(int a[], int n);
+
+void MinHeapFixup(int a[], int i);
+void MinHeapAddNumber(int a[], int n, int nNum);
+void MinHeapFixdown(int a[], int i, int n);
+void MinHeapDeleteNumber(int a[], int n);
+void MakeMinHeap(int a[], int n);
+void MinheapsortTodescendarray(int a[], int n);
+
+
 void Bubble_Sort(int a[], int n);
 void Bubble_Sort2(int a[], int n);
 

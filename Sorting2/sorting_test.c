@@ -26,9 +26,16 @@ int main(int argc, const char * argv[]){
 	// Bubble_Sort2(d,6);
 	// printlist(d,6);
 
-	//     MergeSort(d,6);
+	// MergeSort(d,6);
 	// printlist(d,6);
 	
-	Quick_Sort(d,0,5);
+	// Quick_Sort(d,0,5);
+// 	printlist(d,6);
+	
+	// Select_Sort(d,6);
+	// printlist(d,6);
+	
+	MakeMinHeap(d,6);
+	MinheapsortTodescendarray(d,6);
 	printlist(d,6);
 }
