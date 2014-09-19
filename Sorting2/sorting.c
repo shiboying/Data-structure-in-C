@@ -35,6 +35,20 @@ void Insert_Sort_Better(int a[], int n){
 	}
 }
 
+void InsertSortArray(int arr[] , int n)   
+{  
+    for(int i=1;i<n;i++)//循环从第二个数组元素开始，因为arr[0]作为最初已排序部分   
+    {  
+        int temp=arr[i];//temp标记为未排序第一个元素   
+        int j=i-1;  
+        while (j>=0 && arr[j]>temp)/*将temp与已排序元素从大到小比较，寻找temp应插入的位置*/  
+        {   
+            arr[j+1]=arr[j];    
+            j--;   
+        }   
+        arr[j+1]=temp;   
+    }   
+} 
 
 void Insert_Shell_Sort(int a[], int n){
 	int i, j, gap;
